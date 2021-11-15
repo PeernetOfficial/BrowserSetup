@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Peernet.Browser.Setup", "Peernet.Browser.Setup\Peernet.Browser.Setup.vdproj", "{0F59AF90-5046-484C-9F0C-B56D52B443DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F59AF90-5046-484C-9F0C-B56D52B443DD}.Debug|Default.ActiveCfg = Debug
+		{0F59AF90-5046-484C-9F0C-B56D52B443DD}.Debug|Default.Build.0 = Debug
+		{0F59AF90-5046-484C-9F0C-B56D52B443DD}.Release|Default.ActiveCfg = Release
+		{0F59AF90-5046-484C-9F0C-B56D52B443DD}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0045C491-6961-4431-9607-3F3E996C3795}
+	EndGlobalSection
+EndGlobal
