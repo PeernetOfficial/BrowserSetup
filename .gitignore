@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Peernet.Browser.Setup.AddFirewallRule/bin
+/Peernet.Browser.Setup.AddFirewallRule/obj
