@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Configuration.Install;
 using System.Diagnostics;
+using System.IO;
 
 namespace Peernet.Browser.Setup.AddFirewallRule
 {
@@ -20,8 +20,9 @@ namespace Peernet.Browser.Setup.AddFirewallRule
         {
             var targetDirectory = Context.Parameters["targetdir"];
             targetDirectory = targetDirectory.Replace(@"\\", @"\");
-            string netshCommand = $"advfirewall firewall add rule name=\"{FirewallRuleName}\" dir=in program=\"{targetDirectory}Backend.exe\" profile=any action=allow";
-            ExecuteWithArgs("netsh.exe", netshCommand);
+            string netshCommandArguments = $"advfirewall firewall add rule name=\"{FirewallRuleName}\" dir=in program=\"{targetDirectory}Backend.exe\" profile=any action=allow";
+            ExecuteWithArgs("netsh.exe", netshCommandArguments);
+            CreateBatchFile(targetDirectory, "netsh " + netshCommandArguments);
         }
 
         private void ExecuteWithArgs(string processName, string args)
@@ -35,6 +36,14 @@ namespace Peernet.Browser.Setup.AddFirewallRule
 
             process.StartInfo = processStartInfo;
             process.Start();
+        }
+
+        private void CreateBatchFile(string directory, string command)
+        {
+            using (var streamWriter = File.CreateText($"{directory}/Firewall allow.cmd"))
+            {
+                streamWriter.WriteLine(command);
+            }
         }
     }
 }
