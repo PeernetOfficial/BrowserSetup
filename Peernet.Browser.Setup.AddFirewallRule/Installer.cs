@@ -20,8 +20,8 @@ namespace Peernet.Browser.Setup.AddFirewallRule
         {
             var targetDirectory = Context.Parameters["targetdir"];
             targetDirectory = targetDirectory.Replace(@"\\", @"\");
-            string netshCommand = $"netsh advfirewall firewall add rule name=\"{FirewallRuleName}\" dir=in program=\"{targetDirectory}Backend.exe\" profile=any action=allow";
-            ExecuteWithArgs("CMD.exe", "/c " + netshCommand);
+            string netshCommand = $"advfirewall firewall add rule name=\"{FirewallRuleName}\" dir=in program=\"{targetDirectory}Backend.exe\" profile=any action=allow";
+            ExecuteWithArgs("netsh.exe", netshCommand);
         }
 
         private void ExecuteWithArgs(string processName, string args)
