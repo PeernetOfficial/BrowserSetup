@@ -8,7 +8,7 @@ namespace Peernet.Browser.Setup.AddFirewallRule
     [RunInstaller(true)]
     public partial class Installer : System.Configuration.Install.Installer
     {
-        private const string FirewallRuleName = "Peernet Cmd";
+        private const string FirewallRuleName = "Peernet Browser";
 
         public Installer()
             : base()

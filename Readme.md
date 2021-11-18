@@ -49,7 +49,7 @@ Installation location includes:
 |                                | All the remaining files are build output of the Peernet Browser solution. It consists of internal and 3rd party DLLs on which Peernet Browser depends.   |
 
 Besides the installation location, the installer creates shortcuts to Peernet Browser executable on User's Desktop as well as Programs Menu.
-After first boot in the installation location you may find also other files created by the __Backend.exe__.
+After first boot in the installation location you may find also other files created by the __Backend.exe__ under the __data__ folder.
 
 #### Setup project build
 
