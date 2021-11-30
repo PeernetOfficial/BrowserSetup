@@ -69,7 +69,29 @@ D:\Tools\WIndowsKits\10\bin\10.0.22000.0\x86\MsiInfo.exe "D:\Sources\Peernet\Bro
 ```
 The event is modifying the __MSI__ file in order to allow non-admin users to successfully complete the installation.
 
-Notes:
-- The commandline above is machine specific and should be adjusted to whatever machine it is being built on.
-- MsiInfo.exe is part of __[Windows SDK AddOn](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/)__
-- The MsiInfo.exe _-w 10_ switch sets the MSI "Word Count Summary" property of the MSI file to "compressed - elevated privileges are not required to install this package". More info [here](https://docs.microsoft.com/en-au/windows/win32/msi/word-count-summary)
+> Notes:
+> - The command line above is machine specific and should be adjusted to whatever machine it is being built on.
+> - MsiInfo.exe is part of __[Windows SDK AddOn](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/)__
+> - The MsiInfo.exe _-w 10_ switch sets the MSI "Word Count Summary" property of the MSI file to "compressed - elevated privileges are not required to install this package". More info [here](https://docs.microsoft.com/en-au/windows/win32/msi/word-count-summary)
+
+##### Project can be also built from command line.
+If you already have Visual Studio installed you can use **devenv.exe** from its files location to build the project with command:
+
+```
+D:\Microsoft Visual Studio\2019\Professional\Common7\IDE>devenv D:\Sources\Peernet\BrowserSetup\Peernet.Browser.Setup\Peernet.Browser.Setup.vdproj /build "Release|Any CPU"
+```
+
+However there is no guarantee the build will succeed.  
+If your build fails with error:
+> ERROR: An error occurred while validating.  HRESULT = '8000000A'
+
+It is most likely related to your _EnableOutOfProcBuild_ registry entry. To fix the error you should disable it.
+Depending on Visual Studio version:
+- [VS2013] Set to 0
+ >HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\12.0_Config\MSBuild\EnableOutOfProcBuild
+
+- [VS2015] Set to 0
+ >HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0_Config\MSBuild\EnableOutOfProcBuild
+
+- [VS2019] Run:
+ >D:\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\VSI\DisableOutOfProcBuild\DisableOutOfProcBuild.exe
