@@ -609,12 +609,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_AC722C5826064A6DBE4087B34124596E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B1E0AB074DE74358B23E4C421B04CFEE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -664,12 +658,6 @@
         "Entry"
         {
         "MsmKey" = "8:_CF1560D38D7C4DFFAAB6B441E3E97CDA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D3D50ACBEB764124BB61E0E6DB4BBE45"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2344,26 +2332,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC722C5826064A6DBE4087B34124596E"
-            {
-            "SourcePath" = "8:..\\Peernet.Browser.WPF\\Assets\\MapDarkMode.png"
-            "TargetName" = "8:MapDarkMode.png"
-            "Tag" = "8:"
-            "Folder" = "8:_DAF9262CFB064E05A5091FF372F548EE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B1E0AB074DE74358B23E4C421B04CFEE"
             {
             "AssemblyRegister" = "3:1"
@@ -2621,26 +2589,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D3D50ACBEB764124BB61E0E6DB4BBE45"
-            {
-            "SourcePath" = "8:..\\Peernet.Browser.WPF\\Assets\\MapLightMode.png"
-            "TargetName" = "8:MapLightMode.png"
-            "Tag" = "8:"
-            "Folder" = "8:_DAF9262CFB064E05A5091FF372F548EE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DF39B9A16D3E4948938C65E477D9703D"
             {
             "AssemblyRegister" = "3:1"
@@ -2819,17 +2767,6 @@
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_D80D7AFE324A4B74828A341DD4B085B6"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_DAF9262CFB064E05A5091FF372F548EE"
-                    {
-                    "Name" = "8:Assets"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_4AFF69F770224997805BE151EB83759F"
                         "Folders"
                         {
                         }
