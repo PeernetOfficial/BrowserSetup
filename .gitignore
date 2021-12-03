@@ -1,3 +1,29 @@
 ﻿/Peernet.Browser.Setup.AddFirewallRule/bin
 /Peernet.Browser.Setup.AddFirewallRule/obj
 .vs
+Peernet.Browser.Setup/Debug
+Peernet.Browser.Setup/Release
+
+# Files that should be copied each time
+Backend.exe
+Peernet.Browser.WPF/Application.dll
+Peernet.Browser.WPF/Infrastructure.dll
+Peernet.Browser.WPF/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+Peernet.Browser.WPF/Microsoft.Extensions.Logging.Abstractions.dll
+Peernet.Browser.WPF/Microsoft.Extensions.Logging.dll
+Peernet.Browser.WPF/Microsoft.Extensions.Options.dll
+Peernet.Browser.WPF/Microsoft.Extensions.Primitives.dll
+Peernet.Browser.WPF/Models.dll
+Peernet.Browser.WPF/MvvmCross.dll
+Peernet.Browser.WPF/MvvmCross.Platforms.Wpf.dll
+Peernet.Browser.WPF/MvvmCross.Plugin.Control.dll
+Peernet.Browser.WPF/MvvmCross.Plugin.Control.Platforms.Wpf.dll
+Peernet.Browser.WPF/Newtonsoft.Json.dll
+Peernet.Browser.WPF/Peernet Browser.deps.json
+Peernet.Browser.WPF/Peernet Browser.dll
+Peernet.Browser.WPF/Peernet Browser.exe
+Peernet.Browser.WPF/Peernet Browser.runtimeconfig.json
+Peernet.Browser.WPF/Serilog.dll
+Peernet.Browser.WPF/Serilog.Extensions.Logging.dll
+Peernet.Browser.WPF/Serilog.Sinks.Trace.dll
+Peernet.Browser.WPF/System.Drawing.Common.dll

@@ -3,6 +3,7 @@
 Peernet.Browser.Setup is [Microsoft Visual Studio Installer Project](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects).
 Its purpose is to deliver self-sufficient installation process under single __.msi__ file.
 Setup process is devided into __two stages__:
+
 ### Stage 1. Main installation
 First part of the installation process is to extract all the Peernet.Browser.Setup project files into the installation location.
 The full list of the files has been described [here](#insights).
@@ -34,7 +35,6 @@ $fw.rules | findstr /i "Peernet"
 ```
 
 
-
 ### Peernet Browser Installer Insights
 
 #### Installation location
@@ -51,7 +51,11 @@ Installation location includes:
 Besides the installation location, the installer creates shortcuts to Peernet Browser executable on User's Desktop as well as Programs Menu.
 After first boot in the installation location you may find also other files created by the __Backend.exe__ under the __data__ folder.
 
-#### Setup project build
+## Compile
+
+Note: Download .NET 4.8 Developer Pack first from https://dotnet.microsoft.com/download/dotnet-framework/net48 (required for the Firewall code).
+
+This is also needed: https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects
 
 Recommanded and simplest way of building the Setup project is via Visual Studio 2019.
 In Visual Studio:
@@ -61,6 +65,7 @@ Right-Click 'Peernet.Browser.Setup' project in Solution Explorer ->  Select 'Bui
 ```
 
 Peernet.Browser.Setup project Debug and Release build configurations are set to install the prerequisites. 
+
 The prerequisite for the Peernet Browser is __.NET Runtime 5.0.8 (x64)__. In consequence, output installer will be installing the 
 runtime if missing on the machine.  
 The build also defines PostBuildEvents. Once the Peernet.Browser.Setup build succeeded, the following command is being executed:
@@ -93,7 +98,7 @@ Depending on Visual Studio version:
 - [VS2015] Set to 0
  >HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0_Config\MSBuild\EnableOutOfProcBuild
 
-- [VS2019] Run:
+- [VS2019] Run (from the same directory as the exe!):
  >D:\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\VSI\DisableOutOfProcBuild\DisableOutOfProcBuild.exe
 
 ### Logo
