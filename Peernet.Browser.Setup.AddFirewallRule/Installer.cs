@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Configuration.Install;
 using System.Diagnostics;
 using System.IO;
@@ -18,10 +19,8 @@ namespace Peernet.Browser.Setup.AddFirewallRule
 
         private void MyInstaller_Committed(object sender, InstallEventArgs e)
         {
-            var targetDirectory = Context.Parameters["targetdir"];
-            targetDirectory = targetDirectory.Replace(@"\\", @"\");
             string netshCommandArguments = $"advfirewall firewall add rule name=\"{FirewallRuleName}\" dir=in program=\"%cd%\\Backend.exe\" profile=any action=allow";
-            CreateBatchFile(targetDirectory, "netsh " + netshCommandArguments);
+            CreateBatchFile(GetTargetDirectory(), "netsh " + netshCommandArguments);
             ExecuteWithArgs("netsh.exe", netshCommandArguments);
         }
 
@@ -35,15 +34,32 @@ namespace Peernet.Browser.Setup.AddFirewallRule
             processStartInfo.Verb = "runas";
 
             process.StartInfo = processStartInfo;
-            process.Start();
+            try
+            {
+                process.Start();
+            }
+            catch (Exception e)
+            {
+                CreateFile(GetTargetDirectory(), "firewallnotset", e.Message + "\n" + e.StackTrace);
+            }
         }
 
         private void CreateBatchFile(string directory, string command)
         {
-            using (var streamWriter = File.CreateText($"{directory}/Firewall allow.cmd"))
+            CreateFile(directory, "Firewall allow", command);
+        }
+
+        private void CreateFile(string directory, string fileName, string command)
+        {
+            using (var streamWriter = File.CreateText($"{directory}/{fileName}.cmd"))
             {
                 streamWriter.WriteLine(command);
             }
+        }
+
+        private string GetTargetDirectory()
+        {
+            return Context.Parameters["targetdir"].Replace(@"\\", @"\");
         }
     }
 }

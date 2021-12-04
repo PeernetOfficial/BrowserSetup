@@ -2812,7 +2812,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Peernet Browser"
         "ProductCode" = "8:{35F411E0-82C6-45F7-993B-9B9C54649DA1}"
-        "PackageCode" = "8:{FDE2CC23-34DB-46B4-80B0-DEE61ADE4C2A}"
+        "PackageCode" = "8:{EDB3FDB5-2480-45F1-93A3-D81514A48FA4}"
         "UpgradeCode" = "8:{C23057D5-1540-4289-9153-0676B4229F89}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
