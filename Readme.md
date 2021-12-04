@@ -3,7 +3,8 @@
 Peernet.Browser.Setup is [Microsoft Visual Studio Installer Project](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects).
 Its purpose is to deliver self-sufficient installation process under single __.msi__ file.
 Setup process is devided into __two stages__:
-### Stage 1. Main installation{#stage1}
+
+### Stage 1. Main installation
 First part of the installation process is to extract all the Peernet.Browser.Setup project files into the installation location.
 The full list of the files has been described [here](#insights).
 Default installation location is under current user's AppData folder.
@@ -34,8 +35,7 @@ $fw.rules | findstr /i "Peernet"
 ```
 
 
-
-### Peernet Browser Installer Insights{#insights}
+### Peernet Browser Installer Insights
 
 #### Installation location
 Installation location includes:
@@ -51,7 +51,11 @@ Installation location includes:
 Besides the installation location, the installer creates shortcuts to Peernet Browser executable on User's Desktop as well as Programs Menu.
 After first boot in the installation location you may find also other files created by the __Backend.exe__ under the __data__ folder.
 
-#### Setup project build
+## Compile
+
+Note: Download .NET 4.8 Developer Pack first from https://dotnet.microsoft.com/download/dotnet-framework/net48 (required for the Firewall code).
+
+This is also needed: https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects
 
 Recommanded and simplest way of building the Setup project is via Visual Studio 2019.
 In Visual Studio:
@@ -61,6 +65,7 @@ Right-Click 'Peernet.Browser.Setup' project in Solution Explorer ->  Select 'Bui
 ```
 
 Peernet.Browser.Setup project Debug and Release build configurations are set to install the prerequisites. 
+
 The prerequisite for the Peernet Browser is __.NET Runtime 5.0.8 (x64)__. In consequence, output installer will be installing the 
 runtime if missing on the machine.  
 The build also defines PostBuildEvents. Once the Peernet.Browser.Setup build succeeded, the following command is being executed:
@@ -93,5 +98,44 @@ Depending on Visual Studio version:
 - [VS2015] Set to 0
  >HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0_Config\MSBuild\EnableOutOfProcBuild
 
-- [VS2019] Run:
+- [VS2019] Run (from the same directory as the exe!):
  >D:\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\VSI\DisableOutOfProcBuild\DisableOutOfProcBuild.exe
+
+### Logo
+
+The installer logo is included in this repository as file `Installer.png` and `Peernet.ico`. Since the logo is not expected to change, it does not require to be replaced.
+
+## Required Files
+
+### Browser Files
+
+This is the list of required files in the `Peernet.Browser.WPF` folder. They must be copied from the directory `\Peernet.Browser.WPF\bin\Release\net5.0-windows\win-x64\publish` from the [Peernet Browser repository](https://github.com/PeernetOfficial/Browser). The file `Peernet Browser.dll.config` is always included in this repository and contains recommended default values. Make sure it does not get overwritten accidentally by the Browser repository version when copying the files.
+
+```
+Application.dll
+Infrastructure.dll
+Microsoft.Extensions.DependencyInjection.Abstractions.dll
+Microsoft.Extensions.Logging.Abstractions.dll
+Microsoft.Extensions.Logging.dll
+Microsoft.Extensions.Options.dll
+Microsoft.Extensions.Primitives.dll
+Models.dll
+MvvmCross.dll
+MvvmCross.Platforms.Wpf.dll
+MvvmCross.Plugin.Control.dll
+MvvmCross.Plugin.Control.Platforms.Wpf.dll
+Newtonsoft.Json.dll
+Peernet Browser.deps.json
+Peernet Browser.dll
+Peernet Browser.dll.config
+Peernet Browser.exe
+Peernet Browser.runtimeconfig.json
+Serilog.dll
+Serilog.Extensions.Logging.dll
+Serilog.Sinks.Trace.dll
+System.Drawing.Common.dll
+```
+
+### Backend
+
+The backend executable must be copied as file `Backend.exe` in this root folder. It can be compiled from the [Cmd repository](https://github.com/PeernetOfficial/Cmd).
