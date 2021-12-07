@@ -213,6 +213,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4A02887DD3C11A6B2531CFE40F934EAC"
+        "OwnerKey" = "8:_BA947EFB35834D78A8671608A05B0054"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4C8CEF74A0CA5C3F0C453078E8E840B0"
         "OwnerKey" = "8:_56FB6BE05050B94FD6FD87E939D0B004"
         "MsmSig" = "8:_UNDEFINED"
@@ -227,6 +233,30 @@
         {
         "MsmKey" = "8:_50006E8A00924DE78B7B8486680C3D83"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_50965BB5C03E37D4131B7BEAFB1CE2DB"
+        "OwnerKey" = "8:_1D4081D32D7A56B3A6CD20014E1C72A8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_50965BB5C03E37D4131B7BEAFB1CE2DB"
+        "OwnerKey" = "8:_4A02887DD3C11A6B2531CFE40F934EAC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_50965BB5C03E37D4131B7BEAFB1CE2DB"
+        "OwnerKey" = "8:_BA947EFB35834D78A8671608A05B0054"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_50965BB5C03E37D4131B7BEAFB1CE2DB"
+        "OwnerKey" = "8:_50006E8A00924DE78B7B8486680C3D83"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -743,6 +773,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C712CFD783E396A077C50C3CA39F3ABF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4A02887DD3C11A6B2531CFE40F934EAC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1539,6 +1575,32 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4A02887DD3C11A6B2531CFE40F934EAC"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:LibVLCSharp.WPF, Version=3.6.1.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:LibVLCSharp.WPF.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_05FF68A3C9134D2E9D30858ACB8836FD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4C8CEF74A0CA5C3F0C453078E8E840B0"
             {
             "AssemblyRegister" = "3:1"
@@ -1599,6 +1661,32 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_50965BB5C03E37D4131B7BEAFB1CE2DB"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:LibVLCSharp, Version=3.6.1.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:LibVLCSharp.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_05FF68A3C9134D2E9D30858ACB8836FD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_567A1AB2BC934CF0A0136D786B2DD65A"
@@ -2811,15 +2899,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Peernet Browser"
-        "ProductCode" = "8:{35F411E0-82C6-45F7-993B-9B9C54649DA1}"
-        "PackageCode" = "8:{EDB3FDB5-2480-45F1-93A3-D81514A48FA4}"
+        "ProductCode" = "8:{A8A48CB1-94FB-481E-B969-4F6D48B176CE}"
+        "PackageCode" = "8:{2C514F23-CA11-4362-B54D-C0F7D85B73A3}"
         "UpgradeCode" = "8:{C23057D5-1540-4289-9153-0676B4229F89}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:0.4.0"
         "Manufacturer" = "8:Peernet"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
