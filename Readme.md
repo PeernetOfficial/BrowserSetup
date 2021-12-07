@@ -79,7 +79,7 @@ The event is modifying the __MSI__ file in order to allow non-admin users to suc
 > - MsiInfo.exe is part of __[Windows SDK AddOn](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/)__
 > - The MsiInfo.exe _-w 10_ switch sets the MSI "Word Count Summary" property of the MSI file to "compressed - elevated privileges are not required to install this package". More info [here](https://docs.microsoft.com/en-au/windows/win32/msi/word-count-summary)
 
-##### Project can be also built from command line.
+##### Project can be also built from command line
 If you already have Visual Studio installed you can use **devenv.exe** from its files location to build the project with command:
 
 ```
@@ -104,6 +104,14 @@ Depending on Visual Studio version:
 ### Logo
 
 The installer logo is included in this repository as file `Installer.png` and `Peernet.ico`. Since the logo is not expected to change, it does not require to be replaced.
+
+### Version
+Version of the installed Peernet Browser application can be modified before the build from the Setup project file level _\Peernet.Browser.Setup\Peernet.Browser.Setup.vdproj_  
+Inside the file look up entry similar to
+>"ProductVersion" = "8:\[Version\]"
+
+key-value pair and adjust the value accordingly. __\[Version\]__ is a version number placeholder in format __x.x.x__, e.g.:
+>"ProductVersion" = "8:0.4.0"
 
 ## Required Files
 
