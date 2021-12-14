@@ -2812,7 +2812,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Peernet Browser"
         "ProductCode" = "8:{A8A48CB1-94FB-481E-B969-4F6D48B176CE}"
-        "PackageCode" = "8:{2C514F23-CA11-4362-B54D-C0F7D85B73A3}"
+        "PackageCode" = "8:{B58BE5BB-2C6A-47B1-902A-35F9030B3D06}"
         "UpgradeCode" = "8:{C23057D5-1540-4289-9153-0676B4229F89}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -2835,7 +2835,7 @@
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
-        "PostBuildEvent" = "8:D:\\Tools\\WIndowsKits\\10\\bin\\10.0.22000.0\\x86\\MsiInfo.exe \"D:\\Sources\\Peernet\\BrowserSetup\\Peernet.Browser.Setup\\Release\\Peernet.Browser.Setup.msi\" -w 10"
+        "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
         }
         "Registry"
